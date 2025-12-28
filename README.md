@@ -8,7 +8,7 @@ Determining macromolecular structures from X-ray crystallography requires both d
 
 ## Key Features
 
-- **Multiple Phasing Algorithms**: Hybrid Input-Output (HIO), Difference Map, and Hybrid Difference Map methods
+- **Multiple Phasing Algorithms**: Classical Hybrid Input-Output (HIO), Continuous HIO, Modified Continuous HIO, Transition HIO, Hybrid Projection Reflection (HPR), Difference Map(DM), Modified DM, Averaged Successive Reflections (ASR), RAAR, Modified ASR/RAAR, and Hybrid Difference Map (HDM) methods
 - **MPI Parallelization**: Distributed computing support for rapid convergence
 - **Advanced Constraints**: Solvent flattening, histogram matching, and density limiting
 - **Genetic Algorithm**: Optional evolutionary optimization for improved phase solutions
