@@ -1,0 +1,30 @@
+# Crystallographic Phase Reconstruction
+
+A high-performance computational tool for solving the crystallographic phase problem through iterative density modification algorithms. This software implements hybrid input-output (HIO), difference map, and advanced density modification techniques for ab initio phasing from X-ray diffraction data.
+
+## Overview
+
+Determining macromolecular structures from X-ray crystallography requires both diffraction amplitudes and phases. While amplitudes are directly measurable, phases must be computed. This program employs iterative algorithms combined with real-space constraints to retrieve phases from experimental amplitudes, enabling structure determination without prior molecular replacement models.
+
+## Key Features
+
+- **Multiple Phasing Algorithms**: Hybrid Input-Output (HIO), Difference Map, and Hybrid Difference Map methods
+- **MPI Parallelization**: Distributed computing support for rapid convergence
+- **Advanced Constraints**: Solvent flattening, histogram matching, and density limiting
+- **Genetic Algorithm**: Optional evolutionary optimization for improved phase solutions
+- **Flexible Initialization**: Start from random maps, PDB structures, or molecular replacement
+- **Real-time Monitoring**: Track R-factors, phase errors, and convergence metrics
+- **Standard Formats**: Compatible with MTZ and CIF file formats
+
+## Algorithm Implementation
+
+The software implements three core iterative projection algorithms:
+
+1. **Hybrid Input-Output (HIO)**: Applies negative feedback in solvent regions while maintaining calculated density in protein regions. The feedback parameter β controls convergence behavior.
+
+2. **Difference Map**: Alternates between Fourier-space constraints (observed amplitudes) and real-space constraints (density positivity, solvent flatness) using sophisticated projection operators.
+
+3. **Hybrid Difference Map**: Combines advantages of both HIO and Difference Map approaches for enhanced convergence properties.
+
+All methods incorporate:
+- Solvent content-base
