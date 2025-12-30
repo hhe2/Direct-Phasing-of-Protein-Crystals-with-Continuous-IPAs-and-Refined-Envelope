@@ -1,4 +1,4 @@
-# Crystallographic Phase Reconstruction
+# Crystallographic Phase Reconstruction (Under Construction)
 
 A high-performance computational tool for solving the crystallographic phase problem through iterative density modification algorithms. This software implements hybrid input-output (HIO), difference map, and advanced density modification techniques for ab initio phasing from X-ray diffraction data.
 
