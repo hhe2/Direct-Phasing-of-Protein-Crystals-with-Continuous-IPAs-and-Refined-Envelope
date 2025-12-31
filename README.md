@@ -27,4 +27,19 @@ The software implements three core iterative projection algorithms:
 3. **Hybrid Difference Map**: Combines advantages of both HIO and Difference Map approaches for enhanced convergence properties.
 
 All methods incorporate:
-- Solvent content-base
+- Solvent content requirement:
+Solvent content must exceed 60%.
+
+- Environment variable setup for Linux (required):
+export LD_LIBRARY_PATH=../ccp4_lib/lib:$LD_LIBRARY_PATH
+
+- Environment variable setup for macOS (optional):
+export DYLD_LIBRARY_PATH="/usr/local/Cellar/gcc/14.2.0_1/lib/gcc/14:../ccp4_lib/lib:$DYLD_LIBRARY_PATH"
+
+- MPI initialization (optional, for parallel execution):
+source /public/software/profile.d/mpi_intelmpi-2021.3.0.sh
+
+- Phase retrieval procedure:
+Step 1: Edit the configuration file parameters.txt.
+Step 2: Execute the program with MPI parallelization:
+mpirun -np 100 ./program
